@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: provider
+server:
+  port: 8080
+# ===== 自定义swagger配置 ===== #
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: springfox swagger 3.0整合Demo
+  try-host: http://localhost:${server.port}
+
+#eureka:
+#  instance:
+#    instance-id: ${spring.application.name}
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/ #Eureka地址
+
+#自定义文件上传地址
+file:
+  path: D:/data/upload
